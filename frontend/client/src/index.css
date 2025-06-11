@@ -1,19 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
-.logo-primary, .logo-primary-home {
+/* .logo-primary, .logo-primary-home {
   color: white;
 }
 
 .logo-secondary, .logo-secondary-home {
   color: rgb(120, 244, 239);
-}
+} */
 
 .logo-primary, .logo-secondary {
-  font-size: 28px;
-  font-family: 'Source Serif 4', serif;
-}
-
-.logo-primary-home, .logo-secondary-home {
-  font-size: 34px;
   font-family: 'Source Serif 4', serif;
 }

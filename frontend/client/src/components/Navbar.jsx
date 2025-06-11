@@ -1,24 +1,42 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Navbar = () => {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <>
-      <nav className="navbar fixed-top bg-dark">
-        <div className="container-fluid d-flex align-items-center justify-content-between mt-2 mb-2">
+      <nav className="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <div className="container-fluid">
 
           {/* Logo on the left */}
-          <div>
-            <Link to="/" className="navbar-brand">
-              <span className='logo-primary'>JOB</span>
-              <span className='logo-secondary'>LOGGER.</span>
-            </Link>
-          </div>
+          <Link to="/" className="navbar-brand">
+            <span className='logo-primary text-light fs-2'>JOB</span>
+            <span className='logo-secondary text-info fs-2'>LOGGER.</span>
+          </Link>
 
-          {/* Links on the right */}
-          <div className="nav">
-            <Link to="/" className="nav-link px-3 text-white">Home</Link>
-            <Link to="/register" className="nav-link px-3 text-white">Sign Up</Link>
-            <Link to="/login" className="nav-link px-3 text-white">Sign In</Link>
+          {/* Hamburger Toggle Button */}
+          <button
+            className="navbar-toggler"
+            type="button"
+            onClick={() => setExpanded(!expanded)}
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          {/* Collapsible links */}
+          <div className={`collapse navbar-collapse ${expanded ? 'show' : ''}`}>
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <Link to="/" className="nav-link text-white" onClick={() => setExpanded(false)}>Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/register" className="nav-link text-white" onClick={() => setExpanded(false)}>Sign Up</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/login" className="nav-link text-white" onClick={() => setExpanded(false)}>Sign In</Link>
+              </li>
+            </ul>
           </div>
 
         </div>
