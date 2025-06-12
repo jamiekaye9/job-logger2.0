@@ -5,47 +5,34 @@ const Navbar = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <>
-      <nav className="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-        <div className="container-fluid">
-
-          {/* Logo on the left */}
-          <Link to="/" className="navbar-brand">
-            <span className='logo-primary text-light fs-2'>JOB</span>
-            <span className='logo-secondary text-info fs-2'>LOGGER.</span>
+    <div>
+      <nav className='navbar navbar-expand-md navbar-dark bg-dark'>
+        <div className='container'>
+          <Link to="/" className='navbar-brand'>
+            <span className='source-serif text-light fs-2'>JOB</span>
+            <span className='source-serif text-info fs-2'>LOGGER.</span>
           </Link>
-
-          {/* Hamburger Toggle Button */}
-          <button
-            className="navbar-toggler"
-            type="button"
-            onClick={() => setExpanded(!expanded)}
-          >
-            <span className="navbar-toggler-icon"></span>
+          <button className='navbar-toggler' data-bs-toggle="collapse" data-bs-target="#nav">
+            <div className='navbar-toggler-icon'></div>
           </button>
-
-          {/* Collapsible links */}
-          <div className={`collapse navbar-collapse ${expanded ? 'show' : ''}`}>
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <Link to="/" className="nav-link text-white" onClick={() => setExpanded(false)}>Home</Link>
+          <div className='collapse navbar-collapse' id="nav">
+            <ul className='navbar-nav ms-auto'>
+              <li className='nav-item'>
+                <Link to="/" className='nav-link'>Home</Link>
               </li>
-              <li className="nav-item">
-                <Link to="/register" className="nav-link text-white" onClick={() => setExpanded(false)}>Sign Up</Link>
+              <li className='nav-item'>
+                <Link to="/register" className='nav-link'>Sign Up</Link>
               </li>
-              <li className="nav-item">
-                <Link to="/login" className="nav-link text-white" onClick={() => setExpanded(false)}>Sign In</Link>
+              <li className='nav-item'>
+                <Link to="/login" className='nav-link'>Sign In</Link>
               </li>
             </ul>
           </div>
-
         </div>
       </nav>
+    </div>
+  )
 
-      {/* Spacer to prevent content from being hidden behind the fixed navbar */}
-      <div style={{ height: '60px' }}></div>
-    </>
-  );
-};
+}
 
 export default Navbar;
