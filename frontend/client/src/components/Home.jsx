@@ -8,36 +8,36 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div className='container'>
-        <div className='row'>
-            <div className='d-flex justify-content-center'>
-                <img src={landingPicture} alt="Track your applications with Job Logger" className='col-12 col-md-8 mt-3 mb-5' />
-            </div>
-        </div>
-        <div className='row d-flex flex-lg-row flex-column justify-content-center align-items-center mb-5 gap-4'>
-            <div className="col-lg-3 col-8 card bg-dark text-white rounded-4">
-                <img src={register} alt="Register" className='mt-3 opacity-50 rounded-4' />
-                <div className='card-body'>
-                    <div className='card-title d-flex flex-row justify-content-between'>
-                        <Link to='/register' className='card-title text-info btn btn-info text-dark'>Register</Link>
-                    </div>
-                    <p className='card-text'>Create an account to start tracking your job applications.</p>
-                </div>
-            </div>
-            <div className="col-lg-3 col-8 card bg-dark text-light rounded-4 ">
-                <img src={apply} alt="Apply" className='mt-3 opacity-50 rounded-4' />
-                <div className='card-body'>
-                    <h2 className='card-title text-info'>Apply</h2>
-                    <p className='card-text'>Submit Job Applications and add them to your Profile</p>
-                </div>
-            </div>
-            <div className="col-lg-3 col-8 card bg-dark text-light rounded-4">
-                <img src={interview} alt="Interview" className='mt-3 opacity-50 rounded-4' />
-                <div className='card-body'>
-                    <h2 className='card-title text-info'>Track</h2>
-                    <p className='card-text'>Progress through your Applications, documenting Stages and making note of feedback</p>
+       <div className="row d-flex justify-content-center align-items-center">
+        <div className="col-11 col-lg-8 card bg-dark text-light mt-4 rounded-4 d-flex flex-column justify-content-center align-items-center">
+            <div className="card-body">
+                <h1 className='card-title source-serif text-center mb-4 mt-4'>Welcome to <span className='text-light'>JOB</span><span className='text-info'>LOGGER.</span></h1>
+                <h3 className='card-subtitle display-5 fs-5 text-center'>Your Ultimate Job Application Companion</h3>
+                <div className='d-flex justify-content-center align-items-center flex-row mt-5 gap-4 mb-4'>
+                    <Link className='btn btn-info text-dark'>Sign Up</Link>
+                    <Link className='btn btn-info text-dark'>Sign In</Link>
                 </div>
             </div>
         </div>
+       </div>
+       <div className="row d-flex justify-content-center align-items-center mt-5">
+        <div>
+            <div className="col-8 card">
+                <div className="card-header">
+                    <h2 className='card-title'>Apply</h2>
+                </div>
+                <div className="card-body bg-dark opacity-50">
+                    <img src={register} alt="" />
+                </div>
+            </div>
+            <div className="col-8 card">
+                <img src={apply} alt="" />
+            </div>
+            <div className="col-8 card">
+                <img src={interview} alt="" />
+            </div>
+        </div>
+       </div>
     </div>
   )
 }

@@ -46,7 +46,7 @@ const Register = () => {
     return (
         <div className='container mt-5'>
 
-            <h2 className='text-center'>Sign Up</h2>
+            <h2 className='text-center source-serif'>Sign Up</h2>
 
             {message && <div className='alert alert-info'>{message}</div>}
 
@@ -124,7 +124,7 @@ const Register = () => {
                     </div>
 
                     <div className='text-center mt-3'>
-                        <button type='submit' className='btn btn-primary mt-4 button'>Sign Up</button>
+                        <button type='submit' className='btn btn-info mt-4 button'>Sign Up</button>
                     </div>
 
                 </form>
