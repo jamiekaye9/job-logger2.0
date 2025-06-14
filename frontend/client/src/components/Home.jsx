@@ -50,10 +50,10 @@ const Home = () => {
                     <p className='card-text display-5 fs-5 text-center mb-3'>Visit the Industry Leading job sites below to find your next role</p>
                 </div>
                 <div className='d-flex flex-row gap-3 gap-md-4 gap-lg-5 justify-content-center align-items-center mt-4 mb-4'>
-                    <a href="/https://linkedin.com"><img src={linkedin} alt="" style={{ width: "80px"}} /></a>
-                    <a href="/https://google.com"><img src={google} alt="" style={{ width: "80px"}} /></a>
-                    <a href="/https://glassdoor.com"><img src={glassdoor} alt="" style={{ width: "65px"}} /></a>
-                    <a href="/https://indeed.com"><img src={indeed} alt="" style={{ width: "80px"}} /></a>
+                    <a href="https://linkedin.com"><img src={linkedin} alt="" style={{ width: "80px"}} /></a>
+                    <a href="https://www.google.com/about/careers/applications"><img src={google} alt="" style={{ width: "80px"}} /></a>
+                    <a href="https://www.glassdoor.co.uk/index.htm"><img src={glassdoor} alt="" style={{ width: "65px"}} /></a>
+                    <a href="https://uk.indeed.com/"><img src={indeed} alt="" style={{ width: "80px"}} /></a>
                 </div>
             </div>
         </div>
